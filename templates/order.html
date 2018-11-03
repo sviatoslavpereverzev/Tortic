@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block css %}
+	<link rel="stylesheet" href="/static/css/order.css" type="text/css">
+{% endblock %}
+{% block title %} Order {% endblock %}
+
+{% block content %}
+	<section class="order">
+		<div class="col-4">
+			<div class="col">
+				<label for="nameSelect">Имя</label>
+				<input type="text" class="form-control" id="nameSelect" placeholder="Tortic">
+			</div>
+			<div class="col">
+				<label for="emailSelect">Ваша почта</label>
+				<input type="email" class="form-control" id="emailSelect" placeholder="name@example.com">
+			</div>
+			<div class="col">
+				<label for="contactSelect">Контактный телефон</label>
+				<input type="text" class="form-control" id="contactSelect" placeholder="+380 63 920 66 97">
+			</div>
+			<div class="col">
+				<label for="weightSelect">Вес тортика</label>
+				<input type="text" class="form-control" id="weightSelect" placeholder="3кг">
+			</div>
+			<div class="col">
+				<label for="stuffingSelect">Начинка тортика</label>
+				<select class="form-control" id="stuffingSelect">
+					<option>----------</option>
+					<option>Фруктовая</option>
+					<option>Творожная</option>
+					<option>Шоколадная</option>
+					<option>Ванильная вишня</option>
+					<option>Вишня в шоколаде</option>
+				</select>
+			</div>
+			<div class="col">
+				<label for="comentSelect">Ваши пожелания</label>
+				<input type="text" class="form-control" id="comentSelect" placeholder="">
+			</div>
+			<div class="col">
+				<label for="fileSelect">Изображение тортика</label>
+				<input type="file" class="form-control-file" id="fileSelect">
+			</div>
+			<div class="col">
+				<button type="submit" class="btn btn-light">Оформить заказ</button>
+			</div>
+		</div>
+	</section>
+{% endblock %}

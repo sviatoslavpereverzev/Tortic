@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+}
+a {
+    color: white !important;
+}
+
+.row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+
+
+
+header {
+    background-color: #f891a0;
+    width: 100%;
+    font-size: 20pt;
+    font-family: 'Pangolin', cursive;
+    box-shadow: 0px 0px 10px 0px grey;
+    z-index: 10 ;
+    position: relative;
+}
+
+    header .col-lg-7.col-sm-10 {
+        padding-right: 50px;
+    }
+
+    header .navbar {
+        padding: 0;
+    }
+        header .navbar li h4 {
+            border-bottom: 2px;
+            border-bottom-style: inset;
+            border-color: transparent;
+        }
+
+        header .navbar li :hover h4{
+            border-color: white;
+        }
+
+            header .navbar .nav-item .nav-link {
+                padding-bottom: 5px;
+
+            }
+
+        header .navbar-brand{
+            width: 100%;
+            font-size: 30pt;
+            position: absolute;
+            margin-bottom: -15px;
+        }
+
+            header .navbar-brand img {
+                margin-bottom: 15px;
+            }
+
+
+    header .row h1 {
+        margin-bottom: 0px;
+    }
+
+    header .chats {
+        font-family: 'Caveat', cursive;
+        margin-top: -15px;
+}
+
+        header .chats img {
+            height: 30px;
+            margin-bottom: 8px;
+        }
+
+       header .chats a {
+           color: black !important;
+       }
+
+footer {
+    background-color: #f891a0;
+}
+
+    footer .map {
+        padding: 2% 0 2% 0;
+    }
+
+        footer .map iframe {
+           box-shadow: 0px 0px 5px 0px grey;
+        }
+
+    footer .nav {
+        font-family: 'Pangolin', cursive;
+        margin-top: 2%;
+    }
+
+        footer .nav li h4 {
+            border-bottom: 2px;
+            border-bottom-style: inset;
+            border-color: transparent;
+        }
+
+        footer .nav li :hover h4{
+            border-color: white;
+        }
+
+    footer .chats {
+        margin-top: 2%;
+        font-family: 'Caveat', cursive;
+        font-size: 20pt;
+    }
+
+        footer .chats a {
+            color: black !important;
+        }
+
+        footer .chats .col-sm-auto {
+            margin-top: 2%;
+            padding: 0;
+        }

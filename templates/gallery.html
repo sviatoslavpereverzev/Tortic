@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" href="/static/css/gallery.css" type="text/css">
+{% endblock %}
+{% block title %} Gallery {% endblock %}
+
+{% block content %}
+
+	<!-----Gallery----->
+	<section class="gallery">
+		<div class="sort">
+			<ul class=" nav flex-column">
+				{% for category in categories %}
+					<li><a href="{% url 'gallery' %}"><h4>{{ category.category }}</h4></a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="cake">
+			<ul>
+				{% for cake in cakes %}
+					<li>
+						<img src="{{ cake.image.url }}" alt="cake">
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+
+{% endblock %}

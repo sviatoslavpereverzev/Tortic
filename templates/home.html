@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" href="/static/css/home.css" type="text/css">
+{% endblock %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+	<!-----Stuffing----->
+	<section class="stuffing">
+		<div class="row">
+			<div class="col">
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						{% for slide in slides %}
+							{% if forloop.first %}
+								<li data-target="#carouselExampleIndicators" data-slide-to="{{ slide.order }}"
+									class="active"></li>
+							{% else %}
+								<li data-target="#carouselExampleIndicators" data-slide-to="{{ slide.order }}"></li>
+							{% endif %}
+						{% endfor %}
+					</ol>
+					<div class="carousel-inner">
+						{% for slide in slides %}
+							{% if forloop.first %}
+								<div class="carousel-item active">
+									<div class="row justify-content-center">
+										<div class="col-6 d-flex flex-column justify-content-center align-items-center">
+											<div class="text">
+												<h1 class="text-center ">{{ slide.title }} </h1>
+												{% if slide.new %}
+													<img src="/static/image/new.png" alt="">
+												{% endif %}
+											</div>
+											<div class="text-center bla">
+												{{ slide.desc }}
+											</div>
+										</div>
+										<img src="{{ slide.image.url }}" alt="alt">
+									</div>
+								</div>
+							{% else %}
+								<div class="carousel-item ">
+									<div class="row justify-content-center">
+										<div class="col-6 d-flex flex-column justify-content-center align-items-center">
+											<div class="text">
+												<h1 class="text-center">{{ slide.title }} </h1>
+												{% if slide.new %}
+													<img src="static/image/new.png" alt="">
+												{% endif %}
+											</div>
+											<div class="text-center">
+												{{ slide.desc }}
+											</div>
+										</div>
+										<img src="{{ slide.image.url }}" alt="alt">
+									</div>
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	  </a>
+	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	  </a>
+	</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-----WhyWe----->
+	<section class="whyWe">
+		<div class="row d-flex justify-content-center ">
+			<div >
+			<div class="col-md-auto d-flex justify-content-center align-items-center">
+				<div class="d-flex justify-content-center align-items-center">
+					<img src="static/image/icons8-cake-100.png" alt="">
+				</div>
+			</div>
+				<div class="text-center">
+					<div class="paragraph">ОЧЕНЬ ВКУСНО</div>
+					<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, quibusdam!</div>
+				</div>
+			</div>
+
+			<div>
+			<div class="col-md-auto d-flex justify-content-center align-items-center">
+				<div class="d-flex justify-content-center align-items-center">
+					<img src="static/image/icons8-natural-food-100.png" alt="">
+				</div>
+			</div>
+				<div class="text-center">
+					<div class="paragraph">НАТУРАЛЬНЫЕ ПРОДУКТЫ</div>
+					<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, quibusdam!</div>
+				</div>
+			</div>
+
+			<div>
+			<div class="col-md-auto d-flex justify-content-center align-items-center">
+				<div class="d-flex justify-content-center align-items-center">
+					<img src="static/image/icons8-user-100.png" alt="">
+				</div>
+			</div>
+				<div class="text-center">
+					<div class="paragraph">ИНДИВИДУАЛЬНЫЙ ПОДХОД</div>
+					<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, quibusdam!</div>
+				</div>
+			</div>
+
+			<div>
+			<div class="col-md-auto d-flex justify-content-center align-items-center">
+				<div class="d-flex justify-content-center align-items-center">
+					<img src="static/image/icons8-money-100.png" alt="">
+				</div>
+			</div>
+				<div class="text-center">
+					<div class="paragraph">ДОСТУПНАЯ ЦЕНА</div>
+					<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, quibusdam!</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-----Category----->
+	<section class="category">
+		<div class="topic d-flex align-items-center">КАТЕГОРИИ</div>
+		<div class="categories d-flex justify-content-center align-items-center">
+			<ul>
+				{% for category in categories %}
+					<a href="{% url 'gallery' %}">
+						<li>
+							<span class="descr">
+								{{ category.category }}
+							</span>
+							<img src="{{ category.image.url }}" alt="{{ category.category }}">
+						</li>
+					</a>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+
+
+	<!-----Price----->
+	<section class="price">
+		<p class="topic d-flex align-items-center">ЦЕНА</p>
+		<div class="d-flex flex-column justify-content-center align-items-center">
+			<p>О цене:</p>
+			<p>Цены на тортик начинаются от 50грн за килограмм.</p>
+			<p>Вы можете связаться с нами, мы выслушаем Ваши пожелания</p>
+			<p>и скажем сколько будет стоить Ваш тортик.</p>
+
+		</div>
+	</section>
+
+
+	<!-----Reviews----->
+	<section class="reviews"> <!--text-overflow-->
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+{#				<img class="fon" src="/static/image/fon-reviews2.png" alt="">#}
+				{% for review in reviews %}
+					{% if forloop.first %}
+						<div class="carousel-item active " width="30">
+							<div class="row d-flex  align-items-center" >
+								<div class="media ">
+									<img class="align-self-center mr-3" src="{{ review.icon.url }}"
+										 alt="Generic placeholder static/image">
+									<div class="media-body">
+										<h5 class="mt-0">{{ review.client }}</h5>
+										{{ review.review }}
+									</div>
+								</div>
+							</div>
+						</div>
+					{% else %}
+						<div class="carousel-item ">
+							<div class="row d-flex  align-items-center">
+								<div class="media ">
+									<img class="align-self-center mr-3" src="{{ review.icon.url }}"
+										 alt="Generic placeholder static/image">
+									<div class="media-body">
+										<h5 class="mt-0">{{ review.client }}</h5>
+										{{ review.review }}
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+
+				<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

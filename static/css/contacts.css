@@ -1,0 +1,20 @@
+.contacts {
+    min-height: 400px;
+}
+
+.contacts p {
+    margin: 0 ;
+}
+
+.contacts div {
+    margin: 30px;
+}
+
+.contacts div div {
+    margin: 5px;
+}
+
+.contacts div label, p, .form-control, .btn {
+    /*font-family: 'Caveat', cursive;*/
+    font-size: 15pt;
+}

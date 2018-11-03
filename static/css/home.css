@@ -1,0 +1,208 @@
+.stuffing {
+    background-image: url(https://img2.goodfon.ru/original/1024x1024/9/80/tekstury-hd-quality-wood.jpg);
+    box-shadow: 0px 0px 10px 0px grey;
+    z-index: 9;
+    position: relative;
+}
+
+    .stuffing .carousel-indicators li {
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+    .stuffing .carousel-indicators .active {
+        background-color: #f891a0 !important;
+    }
+
+    .stuffing .carousel-item {
+        background-color: transparent;
+    }
+
+    .stuffing .text-center{
+
+    }
+
+    .stuffing .text {
+        position: relative;
+    }
+
+        .stuffing .text img {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+        }
+
+        .stuffing .text h1 {
+            width: 100%;
+        }
+
+.whyWe {
+    min-height: 1px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px grey;
+    z-index: 8 ;
+    position: relative;
+}
+    .whyWe img {
+        height: 125px;
+    }
+
+    .whyWe .col-md-auto div {
+        margin: 25px 25px 10px 25px;
+        height: 200px;
+        width: 200px;
+        background-color: #a0d8ec;
+        border-radius: 10%;
+    }
+
+    .whyWe .text-center .paragraph {
+
+    }
+
+    .whyWe .text-center .description {
+        margin: 10px 10px 15px 10px;
+        width: 260px;
+    }
+
+
+.category {
+    position: relative;
+    min-height: 500px;
+    background-color: lightpink;
+    box-shadow: 0px 0px 10px 0px grey;
+    z-index: 7 ;
+    position: relative;
+
+}
+
+    .category .categories {
+        padding: 0 15% 0 15%;
+        height: 100%;
+    }
+
+    .category ul, .category li{
+        list-style-type: none;
+    }
+    .category ul{
+        padding: 15px 0 15px 0;
+        margin: 0;
+    }
+
+    .category li{
+        display: inline-block;
+        position: relative;
+        margin: 15px;
+    }
+    .category .descr {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(117, 202, 255, .7);
+        font-family: 'Caveat', cursive;
+        font-size: 40pt;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+    }
+
+        .category li:hover .descr  {
+            opacity: 1;
+        }
+
+    .category img {
+        height: 300px;
+        width: 300px;
+        box-shadow: 0px 0px 3px 0px grey;
+    }
+
+    .category .topic {
+        font-family: 'Oswald', sans-serif;
+        color: rgba(127,51,70,.5);
+        margin-left: -100px;
+        font-size: 60pt;
+        height: 100%;
+        position: absolute;
+        transform: rotate(-90deg);
+    }
+
+.price {
+    min-height: 300px;
+    background-color: white;
+    box-shadow: inset 0px 0px 5px 0px grey;
+    z-index: 6 ;
+    position: relative;
+    }
+
+    .price .topic {
+        margin-left: -100px;
+        font-size: 60pt;
+        height: 100%;
+        position: absolute;
+        transform: rotate(-90deg);
+    }
+
+    .price div {
+        width: 100%;
+        height: 300px;
+    }
+
+
+.reviews {
+    min-height: 400px;
+    background-color: #FBEFF2;
+    vertical-align: middle;
+    box-shadow: 0px 0px 5px 0px grey;
+    z-index: 5 ;
+    position: relative;
+}
+    .reviews .fon {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 6;
+    }
+
+    .reviews .slide  {
+        height: 400px;
+        margin: 0 10% 0 10%;
+    }
+
+    .reviews .carousel-inner {
+        height: 100%;
+    }
+
+    .reviews .carousel-item .row{
+        position: relative;
+        height: 400px;
+        vertical-align: middle;
+
+    }
+
+    .reviews .media {
+        margin: 0 10% 0 10%;
+        width: 80%;
+        border: 2px;
+        border-color: #f891a0;
+
+    }
+
+        .reviews .media img {
+            height: 150px;
+            border-radius: 50%;
+            /*box-shadow: 0px 0px 10px 0px #f891a0;*/
+        }
+
+        .reviews .media-body {
+            padding: 10px;
+            box-shadow:0px 0px 10px 0px #f891a0;
+            border-radius: 10px;
+
+
+        }

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" href="/static/css/contacts.css" type="text/css">
+{% endblock %}
+{% block title %} Contacts {% endblock %}
+
+{% block content %}
+	<!-----Contacts----->
+	<section class="contacts">
+		<div>
+			<p>
+			Мы работаем каждый день с 9.00 до 20.00.
+		</p>
+			<p>
+				Вы можете связаться с нами и заказать тортик либо задать интересующие Вас вопросы.
+			</p>
+		</div>
+		<div>
+			<p>
+			Наш телефон: +380 63 920 66 97
+		</p>
+		</div>
+		<div>
+			<p>
+			Наш адрес: г.Килия, ул. Греческая 21
+		</p>
+		</div>
+		<div>
+			<P>
+			Наша почта: tortic@gmail.com
+		</P>
+		</div>
+		<div>
+			<p>
+			Наши соцсети:
+		<div class="col-sm-auto">
+			<img src="/static/image/instagram.png" alt="instagram">
+			<img src="/static/image/facebook.png" alt="facebook">
+			<img src="/static/image/viber.png" alt="viber">
+			<img src="/static/image/telegram.png" alt="telegram">
+		</div>
+		</p>
+		</div>
+		<div class="col-4">
+			<p>
+				Мы можем вам перезвонить:
+			</p>
+			<div class="col">
+				<label for="nameSelect">Имя</label>
+				<input type="text" class="form-control" id="nameSelect" placeholder="Tortic">
+			</div>
+			<div class="col">
+				<label for="phoneSelect">Телефон</label>
+				<input type="email" class="form-control" id="phoneSelect" placeholder="+380 63 920 66 97">
+			</div>
+			<div class="col">
+				<button type="submit" class="btn btn-light">Перезвонить</button>
+			</div>
+		</div>
+	</section>
+{% endblock %}

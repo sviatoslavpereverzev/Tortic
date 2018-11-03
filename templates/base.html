@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/static/css/base.css" type="text/css">
+	{% block css %} {% endblock %}
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Caveat|Pangolin" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link rel="shortcut icon" href="/static/image/birthday-cake.png" type="static/image/x-icon">
+	<title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+
+<!-----Header----->
+<header>
+	<div class="row ">
+		<div class="col-lg-5 col-sm-2 d-flex align-items-center text">
+			<a class="navbar-brand " href="/">
+				<div class="row justify-content-center ">
+					<img src="/static/image/birthday-cake.png" class="d-inline-block align-top img-fluid" alt=""
+						 width="50rem" height="35rem">
+					<h1>Tortik</h1>
+				</div>
+			</a>
+		</div>
+		<div class="col-lg-7 col-sm-10">
+			<nav class="navbar navbar-expand-sm navbar-light justify-content-end ">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+						aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="nav flex-column flex-sm-row align-content-sm-end">
+						<li class="nav-item nav-pills">
+							<a class="nav-link " href="/order"><h4>Заказать</h4></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="/"><h4>Главная</h4></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'gallery' %}"><h4>Галерея</h4></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="/stuffing"><h4>Начинки</h4></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="/contacts"><h4>Контакты</h4></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="/reviews"><h4>Отзывы</h4></a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="w-100"></div>
+			<div class="row justify-content-end chats">
+				<div class="col-auto"><a href="tel:+380639206697">+380 63 920 66 97</a></div>
+				<div class="col-auto">Пн-Вс с 9.00-20.00</div>
+				<div class="col-sm-auto">
+					<img src="/static/image/instagram.png" alt="instagram">
+					<img src="/static/image/facebook.png" alt="facebook">
+					<img src="/static/image/viber.png" alt="viber">
+					<img src="/static/image/telegram.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+</header>
+
+{% block content %}
+
+{% endblock %}
+
+<!-----Footer----->
+<footer>
+	<div class="row ">
+		<div class=" map col-md-6 d-flex justify-content-center align-items-center">
+			<div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.9744617473757!2d29.26792701548315!3d45.45017074240058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b9d52244d3e0e7%3A0x897f77a5863bd64e!2z0YPQuy4g0JrQvtC70YXQvtC30L3QsNGPLCDQmtC40LvQuNGPLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2ODMwMA!5e0!3m2!1sru!2sua!4v1539204094323"
+						width="600" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<div>
+					<addres>Килия, Одесская область, Греческая 21.</addres>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-md-6">
+			<div class="row">
+				<ul class="col-md-4 nav flex-column d-flex justify-content-end">
+					<li class="nav-item">
+						<a class="nav-link " href="/order"><h4>Заказать</h4></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="/"><h4>Главная</h4></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/gallery"><h4>Галерея</h4></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="/stuffing"><h4>Начинки</h4></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="/contacts"><h4>Контакты</h4></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="/reviews"><h4>Отзывы</h4></a>
+					</li>
+				</ul>
+				<div class="col-md-8 chats flex-column d-flex">
+					<div><a href="tel:+380639206697">+380 63 920 66 97</a></div>
+					<div>Пн-Вс с 9.00-20.00</div>
+					<div class="col-sm-auto">
+						<img src="/static/image/instagram.png" alt="instagram">
+						<img src="/static/image/facebook.png" alt="facebook">
+						<img src="/static/image/viber.png" alt="viber">
+						<img src="/static/image/telegram.png" alt="telegram">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+			integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+			crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

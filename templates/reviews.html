@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" href="/static/css/reviews.css" type="text/css">
+{% endblock %}
+{% block title %} Reviews {% endblock %}
+
+{% block content %}
+	<section class="reviews">
+		{% for review in reviews %}
+			<div class="row d-flex  align-items-center">
+					<div class="media ">
+						<img class="align-self-center mr-3" src="{{ review.icon.url }}"
+							 alt="Generic placeholder static/image">
+						<div class=" media-text align-self-center">
+							<div class="media-body">
+								<h5 class="mt-0">{{ review.client }}</h5>
+								{{ review.review }}
+							</div>
+						</div>
+					</div>
+				</div>
+		{% endfor %}
+	</section>
+{% endblock %}
